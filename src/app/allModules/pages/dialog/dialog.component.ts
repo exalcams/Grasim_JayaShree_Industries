@@ -30,9 +30,13 @@ export class DialogComponent implements OnInit {
     AllCertificates: CertificateClass[] = [];
     CurrentDSSConfiguration: DSSConfiguration[] = [];
     // OutputTypeList:string[]=['ZWOR','ZWOL','ZFLX','ZOTC','ZRMG','ZDN1','ZDN2','ZDN4','ZJOB','ZBWD','ZSRP','ZD07','ZD08','ZSTO','ZST1','ZCR1','ZCR2','RD00'];
-    OutputTypeList=[{SelectOutPutType:'ZWOR'},{SelectOutPutType:'ZWOL'},{SelectOutPutType:'ZOTC'},{SelectOutPutType:'ZRMG'},{SelectOutPutType:'ZDN1'},{SelectOutPutType:'ZDN2'},
-    {SelectOutPutType:'ZDN4'},{SelectOutPutType:'ZJOB'},{SelectOutPutType:'ZBWD'},{SelectOutPutType:'ZSRP'},{SelectOutPutType:'ZD07'},{SelectOutPutType:'ZD08'},
-    {SelectOutPutType:'ZSTO'},{SelectOutPutType:'ZST1'},{SelectOutPutType:'ZCR1'},{SelectOutPutType:'ZCR2'},{SelectOutPutType:'RD00'},{SelectOutPutType:'ZFLX'}];
+    OutputTypeList = [{ SelectOutPutType: 'ZWOR' }, { SelectOutPutType: 'ZWOL' }, { SelectOutPutType: 'ZOTC' },
+    { SelectOutPutType: 'ZRMG' }, { SelectOutPutType: 'ZDN1' }, { SelectOutPutType: 'ZDN2' },
+    { SelectOutPutType: 'ZDN4' }, { SelectOutPutType: 'ZJOB' }, { SelectOutPutType: 'ZBWD' },
+    { SelectOutPutType: 'ZSRP' }, { SelectOutPutType: 'ZD07' }, { SelectOutPutType: 'ZD08' },
+    { SelectOutPutType: 'ZSTO' }, { SelectOutPutType: 'ZST1' }, { SelectOutPutType: 'ZCR1' },
+    { SelectOutPutType: 'ZCR2' }, { SelectOutPutType: 'RD00' }, { SelectOutPutType: 'ZFLX' },
+    { SelectOutPutType: 'ZECM' }, { SelectOutPutType: 'ZCAV' }];
     selectedDocumentType: string;
     // SelectOutPutType: string;
     constructor(
@@ -68,7 +72,7 @@ export class DialogComponent implements OnInit {
     ngOnInit(): void {
         this.GetAllCertificateFromStore();
         this.GetAllAuthoritys();
-       // console.log(this.DSSConfigurationData);
+        // console.log(this.DSSConfigurationData);
         if (this.DSSConfigurationData) {
             this.ConfigurationFormGroup.setValue({
                 // AutoSign: this.DSSConfigurationData.AUTOSIGN ? '1' : '0',
@@ -117,7 +121,7 @@ export class DialogComponent implements OnInit {
     }
 
     SignedAuthoritySelected(SignedAuthority: string): void {
-       // console.log(SignedAuthority);
+        // console.log(SignedAuthority);
         const res = this.AllAuthority.filter(x => x.UserName === SignedAuthority)[0];
         if (res) {
         }
