@@ -36,7 +36,8 @@ export class DialogComponent implements OnInit {
     { SelectOutPutType: 'ZSRP' }, { SelectOutPutType: 'ZD07' }, { SelectOutPutType: 'ZD08' },
     { SelectOutPutType: 'ZSTO' }, { SelectOutPutType: 'ZST1' }, { SelectOutPutType: 'ZCR1' },
     { SelectOutPutType: 'ZCR2' }, { SelectOutPutType: 'RD00' }, { SelectOutPutType: 'ZFLX' },
-    { SelectOutPutType: 'ZECM' }, { SelectOutPutType: 'ZCAV' }];
+    { SelectOutPutType: 'ZECM' }, { SelectOutPutType: 'ZCAV' },{ SelectOutPutType: 'ZGST' },
+    { SelectOutPutType: 'ZIMP' }, { SelectOutPutType: 'ZSER' }];
     selectedDocumentType: string;
     // SelectOutPutType: string;
     constructor(
