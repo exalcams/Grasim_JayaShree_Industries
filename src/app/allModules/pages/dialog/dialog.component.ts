@@ -29,15 +29,15 @@ export class DialogComponent implements OnInit {
     AllFilteredUsersByPlant: UserByPlant[] = [];
     AllCertificates: CertificateClass[] = [];
     CurrentDSSConfiguration: DSSConfiguration[] = [];
-    // OutputTypeList:string[]=['ZWOR','ZWOL','ZFLX','ZOTC','ZRMG','ZDN1','ZDN2','ZDN4','ZJOB','ZBWD','ZSRP','ZD07','ZD08','ZSTO','ZST1','ZCR1','ZCR2','RD00'];
-    OutputTypeList = [{ SelectOutPutType: 'ZWOR' }, { SelectOutPutType: 'ZWOL' }, { SelectOutPutType: 'ZOTC' },
-    { SelectOutPutType: 'ZRMG' }, { SelectOutPutType: 'ZDN1' }, { SelectOutPutType: 'ZDN2' },
-    { SelectOutPutType: 'ZDN4' }, { SelectOutPutType: 'ZJOB' }, { SelectOutPutType: 'ZBWD' },
-    { SelectOutPutType: 'ZSRP' }, { SelectOutPutType: 'ZD07' }, { SelectOutPutType: 'ZD08' },
-    { SelectOutPutType: 'ZSTO' }, { SelectOutPutType: 'ZST1' }, { SelectOutPutType: 'ZCR1' },
-    { SelectOutPutType: 'ZCR2' }, { SelectOutPutType: 'RD00' }, { SelectOutPutType: 'ZFLX' },
-    { SelectOutPutType: 'ZECM' }, { SelectOutPutType: 'ZCAV' },{ SelectOutPutType: 'ZGST' },
-    { SelectOutPutType: 'ZIMP' }, { SelectOutPutType: 'ZSER' }];
+    OutputTypeList:string[]=[
+        'RD00','ZBWD','ZCAV','ZCR1','ZCR2',
+        'ZD07','ZD08','ZD13','ZDES','ZDN1',
+        'ZDN2','ZDN4','ZDST','ZECM','ZFLX',
+        'ZGST','ZIMP','ZJOB','ZOTC','ZQST',
+        'ZRMG','ZSER','ZSRP','ZST1','ZSTO',
+        'ZWOL','ZWOR'
+    ];
+    
     selectedDocumentType: string;
     // SelectOutPutType: string;
     constructor(

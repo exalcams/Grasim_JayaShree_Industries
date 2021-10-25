@@ -41,7 +41,7 @@
                 </mat-form-field> -->
                  <mat-select placeholder="Configuaration 3(Output Type)"   formControlName="Config3"
                         [disabled]="DSSConfigurationData.CONFIG_ID" required>
-                        <mat-option *ngFor="let output of OutputTypeList" [(value)]="output.SelectOutPutType">{{output.SelectOutPutType}}</mat-option>
+                        <mat-option *ngFor="let type of OutputTypeList" [value]="type">{{type}}</mat-option>
                     </mat-select>
                     <mat-error *ngIf="ConfigurationFormGroup.get('Config3').touched && ConfigurationFormGroup.get('Config3').hasError('required')">
                         Configuaration 3 is required
